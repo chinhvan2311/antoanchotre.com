@@ -1,0 +1,81 @@
+/* ==========================================
+   DESIGN SYSTEM TOKENS & CONTRAST MANAGMENT
+   ========================================== */
+
+:root[data-theme="dark"] {
+    --bg-color: #050508;
+    --text-muted: #94a3b8;
+    --text-title: #ffffff;
+    --glass-bg: rgba(13, 16, 32, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.07);
+    --nav-bg: rgba(5, 5, 8, 0.8);
+    --aurora-1: rgba(0, 242, 254, 0.15);
+    --aurora-2: rgba(147, 51, 234, 0.15);
+    --grid-color: rgba(255, 255, 255, 0.02);
+    --card-hover-border: rgba(0, 242, 254, 0.4);
+}
+
+/* Sửa lỗi lóa: Chuyển sang Cyber-Light (Bạc công nghệ độ tương phản cao) */
+:root[data-theme="light"] {
+    --bg-color: #0f121d;
+    --text-muted: #94a3b8;
+    --text-title: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --nav-bg: rgba(15, 18, 29, 0.85);
+    --aurora-1: rgba(16, 185, 129, 0.15); /* Chuyển sang Emerald tăng độ dịu mắt */
+    --aurora-2: rgba(59, 130, 246, 0.15);
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --card-hover-border: rgba(16, 185, 129, 0.5);
+}
+
+.bg-var-bg { background-color: var(--bg-color); }
+.text-var-muted { color: var(--text-muted); }
+
+/* Background Aurora dải sáng mịn */
+.aurora-1 { filter: blur(130px); background: radial-gradient(circle, var(--aurora-1) 0%, transparent 70%); }
+.aurora-2 { filter: blur(130px); background: radial-gradient(circle, var(--aurora-2) 0%, transparent 70%); }
+
+/* Lưới Cyber tinh tế */
+.cyber-grid {
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px), 
+                      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Kính cường lực mờ có viền tương phản */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    transition: border-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+    border-color: var(--card-hover-border);
+}
+
+.glass-nav {
+    background: var(--nav-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* Đổ màu chữ gradient mượt mà không lóa */
+.text-gradient {
+    background: linear-gradient(135deg, var(--text-title) 20%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-brand-gradient {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-light-gradient {
+    background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
