@@ -252,7 +252,7 @@ const UI = {
                 </div>
                 <h1 class="text-4xl sm:text-6xl font-bold tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
                     <span data-i18n="hero_title_1" class="text-gradient"></span>
-                    <span data-i18n="hero_title_2" class="text-brand-gradient block mt-2"></span>
+                    <span data-i18n="hero_title_2" class="text-brand-gradient mt-2"></span>
                 </h1>
                 <p data-i18n="hero_desc" class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto mb-10 font-light leading-relaxed"></p>
                 
@@ -544,10 +544,10 @@ const UI = {
                         <div class="text-xs text-slate-500 mb-2">Windows x64 • SHA256 signed</div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 mt-4 md:mt-0">
-                        <a href="/Antoanchotre.Install.exe" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-medium shadow-sm">
+                        <a href="https://drive.google.com/file/d/1pm7HMnQT5BiBvZ8SnFzSn0oADs4sa7ih/view?usp=sharing" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-medium shadow-sm">
                             <i data-lucide="cpu" class="w-4 h-4 mr-2"></i><span data-i18n="dl_exe"></span>
                         </a>
-                        <a href="/Antoanchotre.Install.zip" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10">
+                        <a href="https://drive.google.com/file/d/1dBhZGpbWmKhznZMKxTm34GoPnQGcEvo_/view?usp=sharing" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10">
                             <i data-lucide="archive" class="w-4 h-4 mr-2"></i><span data-i18n="dl_zip"></span>
                         </a>
                     </div>
