@@ -4,7 +4,7 @@
 const i18nDictionary = {
     vi: {
         nav_features: "Giải pháp", nav_ai: "Công nghệ AI", nav_pricing: "Bảng giá", nav_faq: "Hỏi đáp", btn_login: "Đăng nhập", btn_free_trial: "Thử miễn phí",
-        hero_badge: "⚡ Hệ thống Core AI v2.6 độc quyền",
+        hero_badge: "⚡ Hệ thống Core AI v2.6 độc quyền (sớm ra mắt)",
         hero_title_1: "Lớp lá chắn AI tối tân bảo vệ con trẻ", hero_title_2: "Trước mọi hiểm họa internet",
         hero_desc: "Nền tảng Child Safety ứng dụng học sâu (Deep Learning) thời gian thực, quản trị tập trung đa nền tảng giúp ngăn chặn nội dung độc hại bạo lực và bảo vệ tâm lý số cho trẻ nhỏ.",
         btn_get_started: "Kích hoạt bảo vệ miễn phí", btn_watch_ai: "Phân tích lõi công nghệ",
@@ -40,7 +40,7 @@ const i18nDictionary = {
     },
     en: {
         nav_features: "Solutions", nav_ai: "AI Engine", nav_pricing: "Pricing", nav_faq: "FAQ", btn_login: "Sign In", btn_free_trial: "Free Trial",
-        hero_badge: "⚡ Proprietary Core AI v2.6 System",
+        hero_badge: "⚡ Proprietary Core AI v2.6 System (comming soon)",
         hero_title_1: "Advanced AI Cyber Shield Protecting Kids", hero_title_2: "From All Online Threats",
         hero_desc: "A deep-learning child safety platform providing real-time network filtering and cross-platform centralized management to defend your children's mental and digital well-being.",
         btn_get_started: "Activate Free Protection", btn_watch_ai: "Analyze Core Tech",
@@ -82,7 +82,7 @@ const UI = {
                     <div class="p-2 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-xl shadow-[0_0_15px_rgba(0,242,254,0.3)]">
                         <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
                     </div>
-                    <span class="text-xl font-bold tracking-tight text-white">Kid<span class="text-cyan-400">Shield</span></span>
+                    <span class="text-xl font-bold tracking-tight text-white">Antoan<span class="text-cyan-400">chotre</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                     <a href="#features" data-i18n="nav_features" class="hover:text-cyan-400 transition-colors"></a>
