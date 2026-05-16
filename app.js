@@ -1,4 +1,4 @@
-class KidShieldApp {
+class AntoanchotreApp {
     constructor() {
         // Tự động nhận diện cài đặt hệ thống cũ hoặc mặc định cấu hình
         this.lang = localStorage.getItem('ks_lang') || 'vi';
@@ -74,5 +74,5 @@ class KidShieldApp {
 }
 
 // Chạy khởi tạo ứng dụng
-const app = new KidShieldApp();
+const app = new AntoanchotreApp();
 document.addEventListener('DOMContentLoaded', () => app.init());
