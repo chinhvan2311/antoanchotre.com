@@ -327,7 +327,7 @@ const UI = {
     Footer: () => `
         <footer class="border-t border-white/5 bg-slate-950/40 py-8 text-sm text-slate-500">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                <div class="flex items-center space-x-2"><span class="text-white font-bold">Kid<span class="text-cyan-400">Shield</span></span><span data-i18n="footer_rights"></span></div>
+                <div class="flex items-center space-x-2"><span class="text-white font-bold">Antoan<span class="text-cyan-400">chotre</span></span><span data-i18n="footer_rights"></span></div>
                 <div class="flex space-x-6 text-xs"><a href="#" class="hover:text-slate-300 transition-colors">Terms of Use</a><a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a></div>
             </div>
         </footer>
