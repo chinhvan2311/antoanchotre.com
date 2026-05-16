@@ -33,10 +33,10 @@ const i18nDictionary = {
 
         // FAQ
         faq_title: "Các câu hỏi thường gặp",
-        faq_q1: "KidShield có làm chậm tốc độ internet của thiết bị không?", faq_a1: "Không. Nhờ kiến trúc lọc biên tối ưu hóa, độ trễ xử lý của KidShield dưới 5ms, hoàn toàn không gây giật lag khi trẻ học tập hay giải trí.",
+        faq_q1: "Antoanchotre có làm chậm tốc độ internet của thiết bị không?", faq_a1: "Không. Nhờ kiến trúc lọc biên tối ưu hóa, độ trễ xử lý của Antoanchotre dưới 5ms, hoàn toàn không gây giật lag khi trẻ học tập hay giải trí.",
         faq_q2: "Quyền riêng tư của con tôi được đảm bảo như thế nào?", faq_a2: "Hệ thống áp dụng chuẩn mã hóa zero-knowledge. Toàn bộ nhật ký phân tích tâm lý được xử lý tự động bởi AI và chỉ gửi báo cáo duy nhất cho cha mẹ.",
 
-        footer_rights: "© 2026 KidShield AI Corp. Toàn quyền bảo lưu."
+        footer_rights: "© 2026 Antoanchotre AI Corp. Toàn quyền bảo lưu."
     },
     en: {
         nav_features: "Solutions", nav_ai: "AI Engine", nav_pricing: "Pricing", nav_faq: "FAQ", btn_login: "Sign In", btn_free_trial: "Free Trial",
@@ -64,10 +64,10 @@ const i18nDictionary = {
         btn_buy: "Get Started", btn_trial: "Start 7-Day Free Trial", p_recom: "Recommended",
 
         faq_title: "Frequently Asked Questions",
-        faq_q1: "Does KidShield slow down device internet speeds?", faq_a1: "No. Thanks to edge-filtering infrastructure, KidShield's latency is under 5ms, ensuring seamless network performance.",
+        faq_q1: "Does Antoanchotre slow down device internet speeds?", faq_a1: "No. Thanks to edge-filtering infrastructure, Antoanchotre's latency is under 5ms, ensuring seamless network performance.",
         faq_q2: "How is my child's privacy secured?", faq_a2: "We operate on a zero-knowledge encryption architecture. Mental health data is processed locally by AI, and logs are exclusively viewable by verified parents.",
 
-        footer_rights: "© 2026 KidShield AI Corp. All rights reserved."
+        footer_rights: "© 2026 Antoanchotre AI Corp. All rights reserved."
     }
 };
 
