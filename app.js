@@ -19,6 +19,7 @@ class AntoanchotreApp {
         document.getElementById('ai-security-root').innerHTML = UI.AISecurity();
         document.getElementById('pricing-root').innerHTML = UI.Pricing();
         document.getElementById('faq-root').innerHTML = UI.FAQ();
+        document.getElementById('download-root').innerHTML = UI.Download();
         document.getElementById('footer-root').innerHTML = UI.Footer();
     }
 
@@ -66,6 +67,14 @@ class AntoanchotreApp {
             const translationKey = element.getAttribute('data-i18n');
             if (i18nDictionary[langCode] && i18nDictionary[langCode][translationKey]) {
                 element.innerText = i18nDictionary[langCode][translationKey];
+            }
+        });
+
+        const links = document.querySelectorAll('[data-i18n-link]');
+        links.forEach(element => {
+            const translationKey = element.getAttribute('data-i18n-link');
+            if (i18nDictionary[langCode] && i18nDictionary[langCode][translationKey]) {
+                element.setAttribute('href', i18nDictionary[langCode][translationKey]);
             }
         });
 
