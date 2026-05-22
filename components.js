@@ -544,10 +544,10 @@ const UI = {
                         <div class="text-xs text-slate-500 mb-2">Windows x64 • SHA256 signed</div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 mt-4 md:mt-0">
-                        <a href="https://drive.google.com/file/d/11-hqA_4EfnPTG9Yi6S4sOW7iMimMRQfA/view?usp=sharing" target="_blank" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-medium shadow-sm">
+                        <a href="https://hook.eu1.make.com/vj46lmtk4rsotof79drzejhh6v9za8iz?file=agent-v1" target="_blank" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-medium shadow-sm">
                             <i data-lucide="cpu" class="w-4 h-4 mr-2"></i><span data-i18n="dl_exe"></span>
                         </a>
-                        <a href="https://drive.google.com/file/d/18OkZKAHwxFAswqsBkNyH9YMgRw_d2H7E/view?usp=sharing" target="_blank" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10">
+                        <a href="https://hook.eu1.make.com/vj46lmtk4rsotof79drzejhh6v9za8iz?file=agent-v2" target="_blank" download class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10">
                             <i data-lucide="archive" class="w-4 h-4 mr-2"></i><span data-i18n="dl_zip"></span>
                         </a>
                     </div>
