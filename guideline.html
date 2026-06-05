@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An Toàn Cho Trẻ – Hướng Dẫn Cài Đặt & Sử Dụng</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a6fb4;
+      --primary-light: #e8f3fc;
+      --primary-mid: #3b8fd1;
+      --accent: #f59e0b;
+      --accent-light: #fff8e7;
+      --green: #16a34a;
+      --green-light: #ecfdf5;
+      --red: #dc2626;
+      --red-light: #fef2f2;
+      --orange: #ea580c;
+      --orange-light: #fff7ed;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f0f6ff;
+      --white: #ffffff;
+      --border: #dde8f5;
+      --shadow: 0 4px 20px rgba(26, 111, 180, 0.10);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1a6fb4 0%, #0d4a8f 50%, #072d5e 100%);
+      color: white;
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(245,158,11,0.18) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(59,143,209,0.25) 0%, transparent 55%);
+    }
+    .hero-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+      display: block;
+      filter: drop-shadow(0 4px 16px rgba(0,0,0,0.3));
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      position: relative;
+    }
+    .hero h1 span {
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 17px;
+      opacity: 0.88;
+      margin-top: 12px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      position: relative;
+    }
+    .badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc-wrap {
+      max-width: 820px;
+      margin: -32px auto 0;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+    .toc {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 32px;
+      border-top: 5px solid var(--primary);
+    }
+    .toc h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    @media (max-width: 560px) { .toc ol { grid-template-columns: 1fr; } }
+    .toc a {
+      color: var(--primary-mid);
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+    /* ── MAIN LAYOUT ── */
+    .main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* ── SECTION CARD ── */
+    .section-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .section-header {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-mid) 100%);
+      color: white;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-num {
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .section-body {
+      padding: 28px;
+    }
+    .section-body p {
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    /* ── FEATURE CARDS (Section 2) ── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .feature-card {
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      border-left: 4px solid var(--primary);
+    }
+    .feature-card .feat-icon { font-size: 28px; margin-bottom: 10px; }
+    .feature-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .feature-card p { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+    /* ── PREP CHECKLIST ── */
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 15px;
+    }
+    .checklist li::before {
+      content: '✓';
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── STEP BLOCKS ── */
+    .step-block {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .step-block:last-child { margin-bottom: 0; }
+    .step-title {
+      background: var(--primary-light);
+      border-bottom: 1.5px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .step-badge {
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      padding: 4px 12px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .step-title h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--primary);
+    }
+    .step-content {
+      padding: 20px;
+    }
+    .step-content ol, .step-content ul {
+      padding-left: 20px;
+    }
+    .step-content li { margin-bottom: 8px; font-size: 15px; }
+    .step-content li:last-child { margin-bottom: 0; }
+
+    /* ── IMPORTANT BOX ── */
+    .alert {
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+    .alert-icon { font-size: 22px; flex-shrink: 0; }
+    .alert-danger { background: var(--red-light); border-left: 4px solid var(--red); }
+    .alert-warning { background: var(--accent-light); border-left: 4px solid var(--accent); }
+    .alert-success { background: var(--green-light); border-left: 4px solid var(--green); }
+    .alert-info { background: var(--primary-light); border-left: 4px solid var(--primary); }
+    .alert strong { font-weight: 700; }
+
+    /* ── AUTO PROTECT ── */
+    .protect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 560px) { .protect-grid { grid-template-columns: 1fr; } }
+    .protect-item {
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      border-top: 4px solid var(--primary);
+    }
+    .protect-item .p-icon { font-size: 32px; margin-bottom: 10px; }
+    .protect-item h3 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; color: var(--primary); margin-bottom: 6px; }
+    .protect-item p { font-size: 14px; color: var(--text); }
+
+    /* ── CASE SCENARIOS ── */
+    .case-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .case-tab {
+      padding: 8px 18px;
+      border-radius: 50px;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13.5px;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.2s;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .case-tab:hover, .case-tab.active {
+      background: var(--primary);
+      color: white;
+    }
+    .case-content { display: none; }
+    .case-content.active { display: block; }
+
+    .case-box {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .case-header {
+      padding: 14px 20px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .case-header.block { background: #fef2f2; color: var(--red); border-bottom: 1.5px solid #fecaca; }
+    .case-header.schedule { background: var(--accent-light); color: #92400e; border-bottom: 1.5px solid #fde68a; }
+    .case-header.allow { background: var(--green-light); color: var(--green); border-bottom: 1.5px solid #bbf7d0; }
+    .case-header.warn { background: var(--orange-light); color: var(--orange); border-bottom: 1.5px solid #fed7aa; }
+    .case-steps {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .case-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .case-step-num {
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .case-step-text { font-size: 14.5px; padding-top: 3px; }
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .tag-block { background: #fef2f2; color: var(--red); }
+    .tag-schedule { background: var(--accent-light); color: #92400e; }
+    .tag-allow { background: var(--green-light); color: var(--green); }
+    .tag-warn { background: var(--orange-light); color: var(--orange); }
+
+    /* ── SCHEDULE TABLE ── */
+    .schedule-default {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    .schedule-slot {
+      flex: 1;
+      min-width: 160px;
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      border-top: 4px solid var(--primary-mid);
+      text-align: center;
+    }
+    .schedule-slot .slot-icon { font-size: 28px; margin-bottom: 8px; }
+    .schedule-slot .slot-time {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: var(--primary);
+    }
+    .schedule-slot .slot-label { font-size: 13px; color: var(--text-muted); }
+
+    /* ── SETTINGS TABLE ── */
+    .settings-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+    }
+    .settings-table th {
+      background: var(--primary);
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+    }
+    .settings-table th:first-child { border-radius: 8px 0 0 0; }
+    .settings-table th:last-child { border-radius: 0 8px 0 0; }
+    .settings-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .settings-table tr:nth-child(even) td { background: var(--primary-light); }
+    .settings-table tr:last-child td { border-bottom: none; }
+    .settings-table td:first-child { font-weight: 700; color: var(--primary); }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 15px;
+      background: var(--primary-light);
+      color: var(--primary);
+      user-select: none;
+    }
+    .faq-q .arrow { font-size: 18px; transition: transform 0.25s; }
+    .faq-item.open .faq-q .arrow { transform: rotate(90deg); }
+    .faq-a {
+      display: none;
+      padding: 16px 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      background: white;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── SUPPORT ── */
+    .support-cards {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .support-card {
+      flex: 1;
+      min-width: 200px;
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+      border-top: 4px solid var(--primary-mid);
+    }
+    .support-card .s-icon { font-size: 36px; margin-bottom: 10px; }
+    .support-card .s-label { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; font-weight: 600; }
+    .support-card .s-val { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: var(--primary); }
+    .support-card a { color: var(--primary); text-decoration: none; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: linear-gradient(135deg, #0d4a8f, #072d5e);
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 14px;
+    }
+    footer strong { color: white; }
+
+    /* ── CODE ── */
+    code {
+      font-family: 'Courier New', monospace;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13.5px;
+    }
+
+    /* ── EXAMPLE BOX ── */
+    .example-box {
+      background: #fffbeb;
+      border: 1.5px dashed var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: 14.5px;
+      margin: 12px 0;
+    }
+    .example-box strong { color: #92400e; }
+
+    h3 { font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary); margin: 16px 0 8px; font-size: 17px; }
+    h4 { font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--text); margin: 14px 0 6px; font-size: 15px; }
+
+    strong { font-weight: 700; }
+    em { font-style: italic; color: var(--text-muted); }
+
+    .tip {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 14.5px;
+      margin: 12px 0;
+    }
+    .tip strong { color: var(--green); }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-icon">🛡️</span>
+  <h1>AN TOÀN CHO TRẺ<br><span>Lá Chắn Bảo Vệ Con Trên Không Gian Mạng</span></h1>
+  <p class="hero-sub">Hướng dẫn cài đặt và sử dụng phần mềm bảo vệ trẻ em khi dùng máy tính</p>
+  <div class="hero-badges">
+    <span class="badge">⏱️ Cài trong 5–10 phút</span>
+    <span class="badge">🆓 Miễn phí hè này</span>
+    <span class="badge">👨‍👩‍👧 Dành cho cha mẹ</span>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc-wrap">
+  <div class="toc">
+    <h2>📋 Nội Dung Hướng Dẫn</h2>
+    <ol>
+      <li><a href="#sec1">Tâm sự từ một người cha</a></li>
+      <li><a href="#sec2">Phần mềm giúp được gì?</a></li>
+      <li><a href="#sec3">Trước khi bắt đầu</a></li>
+      <li><a href="#sec4">Hướng dẫn cài đặt</a></li>
+      <li><a href="#sec5">Máy tính bảo vệ con ra sao?</a></li>
+      <li><a href="#sec6">Thay đổi cài đặt</a></li>
+      <li><a href="#sec7">Xóa phần mềm</a></li>
+      <li><a href="#sec8">Câu hỏi thường gặp</a></li>
+      <li><a href="#sec9">Hỗ trợ & góp ý</a></li>
+    </ol>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- SECTION 1 -->
+  <div class="section-card" id="sec1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Tâm Sự Từ Một Người Cha</h2>
+    </div>
+    <div class="section-body">
+      <p>Chào quý phụ huynh, tôi cũng là một người cha có hai con. Tôi hiểu nỗi lo khi con dùng máy tính quá lâu, ảnh hưởng đến việc học, giấc ngủ và sức khỏe.</p>
+      <p>Tôi cũng lo khi con có thể vô tình xem phải nội dung không phù hợp trên Internet. Vì cha mẹ không thể luôn ngồi cạnh con, nên cần một công cụ hỗ trợ đơn giản, dễ dùng và đáng tin cậy.</p>
+      <p>Phần mềm <strong>Antoanchotre</strong> giúp cha mẹ quản lý thời gian dùng máy tính và hạn chế nội dung không phù hợp cho con, ngay cả khi cha mẹ bận việc.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section-card" id="sec2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Phần Mềm Này Giúp Được Gì Cho Cha Mẹ?</h2>
+    </div>
+    <div class="section-body">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feat-icon">⏰</div>
+          <h3>Quản lý giờ chơi</h3>
+          <p>Tự động tắt máy khi hết giờ cha mẹ quy định.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🚫</div>
+          <h3>Chặn trang web xấu</h3>
+          <p>Tự động khóa các trang có nội dung người lớn, bạo lực, cờ bạc, game online.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">👶</div>
+          <h3>Bảo vệ từng đứa con</h3>
+          <p>Nếu nhiều con dùng chung một máy, áp dụng luật riêng cho từng bé.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-card" id="sec3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Trước Khi Bắt Đầu, Cha Mẹ Cần Biết</h2>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>Cài đặt thường mất khoảng <strong>5 đến 10 phút</strong>.</li>
+        <li>Cha mẹ chỉ cần cài <strong>một lần</strong>, sau đó phần mềm tự hoạt động.</li>
+        <li>Nên chuẩn bị sẵn <strong>sổ và bút</strong> để ghi mật khẩu.</li>
+        <li>Nếu chưa quen dùng máy tính, chỉ cần làm đúng theo từng bước và hình minh họa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section-card" id="sec4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Hướng Dẫn Cài Đặt (Chỉ Làm 1 Lần Duy Nhất)</h2>
+    </div>
+    <div class="section-body">
+      <div class="alert alert-warning">
+        <span class="alert-icon">📓</span>
+        <div><strong>[Chuẩn bị]:</strong> Hãy chuẩn bị sẵn một cuốn sổ để ghi mật khẩu. Đây là mật khẩu dùng để đổi cài đặt hoặc gỡ phần mềm sau này.</div>
+      </div>
+
+      <div class="step-block">
+        <div class="step-title">
+          <span class="step-badge">Bước 1</span>
+          <h3>Tải phần mềm về máy tính</h3>
+        </div>
+        <div class="step-content">
+          <ol>
+            <li>Mở máy tính lên, vào trình duyệt và gõ địa chỉ: <strong><a href="http://antoanchotre.vn" target="_blank">antoanchotre.vn</a></strong></li>
+          </ol>
+          <div class="alert alert-info">
+            <span class="alert-icon">💡</span>
+            <div>Nếu trình duyệt hiện cảnh báo, hãy kiểm tra đúng địa chỉ trang là <strong>antoanchotre.vn</strong>. Nếu vẫn không vào được, dùng đường dẫn dự phòng: <a href="https://antoanchotre.github.io/home" target="_blank"><strong>https://antoanchotre.github.io/home</strong></a></div>
+          </div>
+          <ol start="2">
+            <li>Tại màn hình trang web hiện ra, bấm vào nút màu xanh <strong>"Bắt đầu ngay"</strong>.</li>
+            <li>Máy tính sẽ hiện ra các gói dịch vụ, cha mẹ tìm gói <strong>"Gia đình nâng cao"</strong> và bấm vào chữ <strong>"Miễn phí hè này"</strong> (hoàn toàn không mất chi phí).</li>
+            <li>Bấm vào nút <strong>"Tải bộ cài đặt"</strong>. Nên chọn file có đuôi <code>.exe</code> vì đây là file cài đặt, chỉ cần bấm mở để cài. Nếu tải file <code>.zip</code>, cần giải nén trước khi cài đặt.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="step-block">
+        <div class="step-title">
+          <span class="step-badge">Bước 2</span>
+          <h3>Tiến hành cài đặt</h3>
+        </div>
+        <div class="step-content">
+          <ol>
+            <li>Sau khi tải xong, bấm chuột vào file có tên <code>Antoanchotre.Install.exe</code> vừa tải về.</li>
+            <li>Nếu máy tính hỏi, hãy bấm nút <strong>"Yes"</strong> (Đồng ý).</li>
+            <li><strong>Chọn tài khoản của con:</strong> Màn hình sẽ hiện ra danh sách các tài khoản trên máy tính, cha mẹ bấm tích chọn vào tài khoản muốn bảo vệ, rồi bấm <strong>"Tiếp tục"</strong>.</li>
+            <li>
+              <strong>Tạo mật khẩu của cha mẹ:</strong>
+              <ul style="margin-top:8px;">
+                <li>Điền đầy đủ thông tin tên, số điện thoại và tự nghĩ một mật khẩu.</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="alert alert-danger">
+            <span class="alert-icon">⚠️</span>
+            <div><strong>QUAN TRỌNG:</strong> Hãy chép ngay mật khẩu này vào sổ tay. Chỉ cha mẹ giữ mật khẩu này để đổi cài đặt hoặc gỡ phần mềm.</div>
+          </div>
+          <div class="alert alert-danger">
+            <span class="alert-icon">🔄</span>
+            <div><strong>QUAN TRỌNG:</strong> Sau khi cài xong, cha mẹ hãy <strong>Khởi động lại máy</strong> để phần mềm bắt đầu hoạt động.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section-card" id="sec5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Máy Tính Sẽ Tự Động Bảo Vệ Con Như Thế Nào?</h2>
+    </div>
+    <div class="section-body">
+      <p>Sau khi cài xong, phần mềm sẽ tự bật chế độ bảo vệ cơ bản cho con:</p>
+      <div class="protect-grid" style="margin-top:16px;">
+        <div class="protect-item">
+          <div class="p-icon">⏱️</div>
+          <h3>Hết giờ là tắt máy</h3>
+          <p>Mỗi ngày con được dùng tối đa <strong>120 phút</strong>. Nếu con dùng liên tục 45 phút, máy sẽ yêu cầu nghỉ 15 phút. Phần mềm sẽ báo trước 5 phút trước khi khóa máy để con kịp lưu bài.</p>
+        </div>
+        <div class="protect-item">
+          <div class="p-icon">🚫</div>
+          <h3>Tự động chặn nội dung</h3>
+          <p>Nếu con tìm kiếm hoặc mở các nội dung đã bị hạn chế, phần mềm sẽ tự đóng lại và hiện thông báo nhắc nhở.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section-card" id="sec6">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Hướng Dẫn Thay Đổi Cài Đặt (Khi Cần)</h2>
+    </div>
+    <div class="section-body">
+
+      <h3>🖥️ Cách mở phần mềm quản lý</h3>
+      <p>Mở phần mềm <strong>Antoanchotre.ParentControl</strong> từ biểu tượng trên màn hình. Nếu không tìm thấy icon, làm theo các bước sau:</p>
+      <ol style="padding-left:20px; margin:12px 0;">
+        <li>Đăng nhập vào tài khoản máy tính của con.</li>
+        <li>Bấm giữ nút <strong>Windows</strong> rồi bấm thêm nút chữ <strong>R</strong> (Windows + R).</li>
+        <li>Một ô nhỏ sẽ hiện ra. Sao chép dòng chữ dưới đây, dán vào ô đó rồi bấm <strong>OK</strong>:<br><code style="display:block; margin:8px 0; padding:8px 12px;">%ProgramFiles%\Antoanchotre\Antoanchotre.ParentControl.exe</code></li>
+        <li>Nhập mật khẩu mà cha mẹ đã ghi trong sổ tay để đăng nhập.</li>
+      </ol>
+
+      <hr style="border:none; border-top:1.5px solid var(--border); margin:24px 0;">
+
+      <h3>🌐 Cách chặn web xấu và quản lý game</h3>
+      <p>Sau khi đăng nhập, màn hình <strong>Thiết lập nội dung hạn chế</strong> sẽ hiện ra. Chú ý 2 ô chính: <strong>Nội dung</strong> và <strong>Mức độ kiểm soát</strong>.</p>
+
+      <div class="alert alert-info" style="margin:16px 0;">
+        <span class="alert-icon">📖</span>
+        <div>
+          <strong>Khái niệm dễ hiểu:</strong><br>
+          • <strong>Nội dung:</strong> Tên trang web hoặc trò chơi muốn quản lý.<br>
+          • <strong>Mức độ kiểm soát:</strong> Lệnh cha mẹ muốn máy thực hiện.
+        </div>
+      </div>
+
+      <!-- Case Tabs -->
+      <div class="case-tabs">
+        <button class="case-tab active" onclick="showCase('block')">🔴 Chặn hoàn toàn</button>
+        <button class="case-tab" onclick="showCase('schedule')">🟡 Theo lịch</button>
+        <button class="case-tab" onclick="showCase('allow')">🟢 Luôn cho phép</button>
+        <button class="case-tab" onclick="showCase('warn')">🟠 Chỉ cảnh báo</button>
+      </div>
+
+      <div id="case-block" class="case-content active">
+        <div class="case-box">
+          <div class="case-header block">🔴 Muốn chặn hoàn toàn (web xấu, cờ bạc, bạo lực)</div>
+          <div class="case-steps">
+            <p style="font-size:14px; color:var(--text-muted); margin-bottom:4px;">Dùng khi cha mẹ không muốn con mở các trang này trong bất kỳ thời điểm nào.</p>
+            <div class="case-step">
+              <div class="case-step-num">1</div>
+              <div class="case-step-text">Tại ô <strong>Nội dung</strong>, gõ tên trang web hoặc từ khóa muốn chặn.<br><em>Ví dụ: phim18.net, casino.com, "noi dung nguoi lon"</em></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">2</div>
+              <div class="case-step-text">Tại ô <strong>Mức độ kiểm soát</strong>, chọn <span class="tag tag-block">Luôn chặn</span></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">3</div>
+              <div class="case-step-text">Bấm <strong>Lưu/Thêm mới</strong>.</div>
+            </div>
+            <div class="alert alert-success" style="margin-top:8px;">
+              <span class="alert-icon">✅</span>
+              <div><strong>Kết quả:</strong> Trang web hoặc từ khóa đó sẽ bị chặn ngay. Màn hình sẽ hiện thông báo để con hiểu đây là nội dung không phù hợp.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="case-schedule" class="case-content">
+        <div class="case-box">
+          <div class="case-header schedule">🟡 Chỉ cho phép chơi game theo giờ cố định</div>
+          <div class="case-steps">
+            <p style="font-size:14px; color:var(--text-muted); margin-bottom:4px;">Dùng khi cha mẹ vẫn cho con chơi game, nhưng chỉ trong khung giờ giải trí đã cài sẵn.</p>
+            <div class="case-step">
+              <div class="case-step-num">1</div>
+              <div class="case-step-text">Tại ô <strong>Nội dung</strong>, gõ tên trò chơi hoặc trang web game.<br><em>Ví dụ: Roblox, Game Center, roblox.com</em></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">2</div>
+              <div class="case-step-text">Tại ô <strong>Mức độ kiểm soát</strong>, chọn <span class="tag tag-schedule">Chỉ cho sử dụng theo lịch</span></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">3</div>
+              <div class="case-step-text">Bấm <strong>Lưu/Thêm mới</strong>.</div>
+            </div>
+            <div class="alert alert-success" style="margin-top:8px;">
+              <span class="alert-icon">✅</span>
+              <div><strong>Kết quả:</strong> Vào giờ học con mở game sẽ bị khóa. Game chỉ được mở trong khung giờ giải trí đã cài.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="case-allow" class="case-content">
+        <div class="case-box">
+          <div class="case-header allow">🟢 Luôn cho phép học tập (tránh bị khóa nhầm)</div>
+          <div class="case-steps">
+            <p style="font-size:14px; color:var(--text-muted); margin-bottom:4px;">Dùng khi cha mẹ muốn đảm bảo một trang học tập luôn mở được và không bị khóa nhầm.</p>
+            <div class="case-step">
+              <div class="case-step-num">1</div>
+              <div class="case-step-text">Tại ô <strong>Nội dung</strong>, gõ chính xác đường link học tập của con.<br><em>Ví dụ: tienganhchoe.com, tienganh.abc.com/learn</em></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">2</div>
+              <div class="case-step-text">Tại ô <strong>Mức độ kiểm soát</strong>, chọn <span class="tag tag-allow">Luôn cho phép sử dụng</span></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">3</div>
+              <div class="case-step-text">Bấm <strong>Lưu/Thêm mới</strong>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="case-warn" class="case-content">
+        <div class="case-box">
+          <div class="case-header warn">🟠 Chỉ cảnh báo chứ không chặn</div>
+          <div class="case-steps">
+            <p style="font-size:14px; color:var(--text-muted); margin-bottom:4px;">Dùng cho các trang mà cha mẹ không muốn cấm hẳn nhưng vẫn muốn nhắc con dùng cẩn thận.</p>
+            <div class="case-step">
+              <div class="case-step-num">1</div>
+              <div class="case-step-text">Tại ô <strong>Nội dung</strong>, gõ tên trang web.<br><em>Ví dụ: youtube.com</em></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">2</div>
+              <div class="case-step-text">Tại ô <strong>Mức độ kiểm soát</strong>, chọn <span class="tag tag-warn">Cảnh báo khi sử dụng</span></div>
+            </div>
+            <div class="case-step">
+              <div class="case-step-num">3</div>
+              <div class="case-step-text">Bấm <strong>Lưu/Thêm mới</strong>.</div>
+            </div>
+            <div class="alert alert-success" style="margin-top:8px;">
+              <span class="alert-icon">✅</span>
+              <div><strong>Kết quả:</strong> Khi con vào trang này, máy vẫn cho xem nhưng sẽ hiện thông báo nhắc con dùng cẩn thận hơn.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip" style="margin-top:16px;">
+        <strong>💡 Mẹo nhỏ:</strong> Nếu muốn xóa một lệnh đã cài, cha mẹ tìm mục đó trong danh sách phía dưới rồi bấm <strong>Xóa</strong> hoặc biểu tượng thùng rác.
+      </div>
+
+      <hr style="border:none; border-top:1.5px solid var(--border); margin:24px 0;">
+
+      <h3>📅 Cách cài đặt lịch giải trí</h3>
+      <p>Bấm chọn mục <strong>"Lịch giải trí"</strong> ở thanh bảng chọn sau khi đăng nhập.</p>
+
+      <p style="margin:12px 0; font-weight:600;">Chế độ cài sẵn của hệ thống (Mặc định):</p>
+      <div class="schedule-default">
+        <div class="schedule-slot">
+          <div class="slot-icon">🌞</div>
+          <div class="slot-time">10:00 – 10:30</div>
+          <div class="slot-label">Ca sáng</div>
+        </div>
+        <div class="schedule-slot">
+          <div class="slot-icon">🌙</div>
+          <div class="slot-time">20:00 – 20:30</div>
+          <div class="slot-label">Ca tối</div>
+        </div>
+      </div>
+      <p style="font-size:14px; color:var(--text-muted); margin-top:8px;">Ngoài 2 khoảng thời gian này, con bấm vào game hay ứng dụng giải trí đều sẽ bị máy chặn lại.</p>
+
+      <h4>Hướng dẫn tự đổi giờ giải trí</h4>
+      <div class="step-block">
+        <div class="step-title"><span class="step-badge">Bước 1</span><h3>Đặt tên cho lịch giải trí</h3></div>
+        <div class="step-content"><p>Tại ô <strong>"Tiêu đề"</strong>, gõ một cái tên ngắn gọn để dễ nhớ.<br><em>Ví dụ: "Giải trí 30 phút buổi sáng" hoặc "Con chơi game cuối tuần"</em></p></div>
+      </div>
+      <div class="step-block">
+        <div class="step-title"><span class="step-badge">Bước 2</span><h3>Chọn ngày bắt đầu và ngày kết thúc</h3></div>
+        <div class="step-content">
+          <ul>
+            <li><strong>Ngày bắt đầu:</strong> Bấm chọn ngày cha mẹ muốn lịch này bắt đầu có hiệu lực.</li>
+            <li><strong>Ngày kết thúc:</strong> Bấm chọn ngày muốn hủy bỏ lịch này.</li>
+          </ul>
+          <div class="tip"><strong>💡 Mẹo:</strong> Nếu muốn lịch áp dụng mãi mãi cho đến khi cha mẹ tự đổi, hãy bấm tích chọn vào ô <strong>"Không có ngày kết thúc"</strong>.</div>
+        </div>
+      </div>
+      <div class="step-block">
+        <div class="step-title"><span class="step-badge">Bước 3</span><h3>Chọn giờ con được phép chơi</h3></div>
+        <div class="step-content">
+          <ul>
+            <li>Tại ô <strong>"Từ giờ"</strong>: Nhập giờ con được phép bắt đầu mở máy chơi (Ví dụ: 10:00).</li>
+            <li>Tại ô <strong>"Đến giờ"</strong>: Nhập giờ máy sẽ khóa lại (Ví dụ: 10:30).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step-block">
+        <div class="step-title"><span class="step-badge">Bước 4</span><h3>Chọn số lần lặp lại</h3></div>
+        <div class="step-content">
+          <ul>
+            <li><strong>1 lần:</strong> Chỉ áp dụng đúng ngày đã chọn.</li>
+            <li><strong>Hàng ngày:</strong> Ngày nào cũng cho con chơi vào khung giờ này.</li>
+            <li><strong>Hàng tuần / Hàng tháng:</strong> Chỉ cho chơi vào các tuần hoặc tháng cố định.</li>
+            <li><strong>Khoảng cách lặp:</strong> Cài đặt cách mấy ngày thì lặp lại (Ví dụ: số 2 = cách 2 ngày mới cho chơi).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step-block">
+        <div class="step-title"><span class="step-badge">Bước 5</span><h3>Chọn ngày trong tuần</h3></div>
+        <div class="step-content"><p>Bấm tích chọn vào các ngày muốn con được chơi (Ví dụ: chỉ tích <em>Thứ Bảy</em> và <em>Chủ Nhật</em>).</p></div>
+      </div>
+      <div class="step-block">
+        <div class="step-title"><span class="step-badge">Bước 6</span><h3>Lưu hoặc Xóa lịch</h3></div>
+        <div class="step-content">
+          <ul>
+            <li><strong>Để áp dụng lịch mới:</strong> Bấm nút <strong>"Thêm"</strong> (nếu thêm mới) hoặc <strong>"Lưu"</strong> (nếu chỉnh sửa).</li>
+            <li><strong>Để hủy bỏ lịch cũ:</strong> Tìm đúng tên lịch trong danh sách phía dưới và bấm <strong>"Xóa"</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <strong>🎮 Ví dụ thực tế: Quản lý Roblox</strong><br><br>
+        Để quản lý trò chơi <strong>Roblox</strong>, cha mẹ cần làm 2 việc:<br><br>
+        1. Tại mục <em>Hạn chế nội dung</em>: Gõ chữ <strong>Roblox</strong> và chọn <span class="tag tag-schedule">Chỉ cho sử dụng theo lịch</span><br>
+        2. Tại mục <em>Lịch biểu</em>: Cài giờ từ <strong>20:00 đến 20:30</strong>.<br><br>
+        👉 <strong>Kết quả:</strong> Đúng 8 giờ tối con mới mở được Roblox, và đến 8 giờ 30 tối máy sẽ tự động khóa lại.
+      </div>
+
+      <hr style="border:none; border-top:1.5px solid var(--border); margin:24px 0;">
+
+      <h3>📊 Cách xem nhật ký và quản lý hệ thống</h3>
+      <p>Sau khi đăng nhập, cha mẹ bấm vào từng mục trong thanh bảng chọn:</p>
+
+      <table class="settings-table" style="margin:16px 0;">
+        <thead>
+          <tr><th>Mục</th><th>Hiển thị gì?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nhật ký truy cập</td><td>Danh sách những phần mềm, ứng dụng mà trẻ đã mở.</td></tr>
+          <tr><td>Nhật ký trình duyệt</td><td>Danh sách những website mà trẻ đã truy cập qua trình duyệt.</td></tr>
+          <tr><td>Phiên sử dụng</td><td>Danh sách những lần trẻ mở máy và thời gian sử dụng mỗi lần.</td></tr>
+          <tr><td>Thông tin phụ huynh</td><td>Thông tin của phụ huynh, cho phép thay đổi và đổi mật khẩu.</td></tr>
+          <tr><td>Cấu hình hệ thống</td><td>Các cài đặt thời gian và giới hạn sử dụng của hệ thống.</td></tr>
+        </tbody>
+      </table>
+
+      <hr style="border:none; border-top:1.5px solid var(--border); margin:24px 0;">
+
+      <h3>⚙️ Cách thay đổi cài đặt hệ thống</h3>
+      <p>Bấm vào các ô số trong mục <strong>"Cấu hình hệ thống"</strong>, xóa đi và gõ số mới theo nhu cầu:</p>
+
+      <table class="settings-table" style="margin:16px 0;">
+        <thead>
+          <tr><th>Cài đặt</th><th>Mặc định</th><th>Gợi ý</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Giới hạn thời gian hàng ngày</td><td>120 phút</td><td>Có thể giảm xuống 60–90 phút nếu muốn con tập trung học hơn.</td></tr>
+          <tr><td>Thời gian tối đa mỗi lần dùng máy</td><td>45 phút</td><td>Nên giữ nguyên để bảo vệ mắt và cột sống cho con.</td></tr>
+          <tr><td>Thời gian nghỉ giữa các lần mở máy</td><td>15 phút</td><td>Nên giữ nguyên để con có thời gian uống nước và thư giãn mắt.</td></tr>
+          <tr><td>Thời gian chờ tắt máy</td><td>5 phút</td><td>Nên giữ nguyên để con không bị ức chế khi máy tắt đột ngột.</td></tr>
+          <tr><td>Thời gian lưu trữ dữ liệu</td><td>6 tháng</td><td>Chỉ nên gõ số từ 1–6 tháng. Không lưu quá dài sẽ làm nặng máy.</td></tr>
+          <tr><td>Bật tính năng hạn chế nội dung</td><td>Bật</td><td>Tuyệt đối không tắt mục này.</td></tr>
+          <tr><td>Thời gian hết hạn</td><td>Ngày cụ thể trong tương lai</td><td>Chú ý ngày này để chủ động gia hạn hoặc cập nhật phiên bản mới.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-danger">
+        <span class="alert-icon">🔄</span>
+        <div><strong>QUAN TRỌNG:</strong> Sau khi bấm <strong>Lưu</strong>, các thay đổi chỉ áp dụng sau khi máy được <strong>Restart</strong>. Nếu chưa khởi động lại máy, con vẫn sẽ dùng theo cài đặt cũ.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section-card" id="sec7">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Hướng Dẫn Xóa Phần Mềm (Khi Con Đã Lớn)</h2>
+    </div>
+    <div class="section-body">
+      <p>Để tránh việc con tự ý xóa phần mềm để chơi lén, phần mềm yêu cầu phải có mật khẩu của cha mẹ mới xóa được:</p>
+      <ol style="padding-left:20px; margin-top:16px; display:flex; flex-direction:column; gap:10px;">
+        <li>Bấm giữ nút <strong>Windows</strong> và bấm nút chữ <strong>I</strong> (Windows + I).</li>
+        <li>Chọn mục <strong>Apps</strong> (Ứng dụng) → Chọn <strong>Installed apps</strong> (Danh sách ứng dụng đã cài).</li>
+        <li>Tìm chữ <strong>Antoanchotre</strong>, bấm vào dấu <strong>3 chấm</strong> bên cạnh và chọn <strong>Uninstall</strong> (Gỡ cài đặt).</li>
+        <li>Bấm nút <strong>"Yes"</strong> nếu bạn thực sự muốn gỡ.</li>
+        <li>Nếu máy tính hỏi, hãy bấm nút <strong>"Yes"</strong> (Đồng ý).</li>
+        <li>Nhập mật khẩu của phụ huynh, rồi bấm <strong>OK</strong> là xong.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- SECTION 8 FAQ -->
+  <div class="section-card" id="sec8">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Câu Hỏi Thường Gặp</h2>
+    </div>
+    <div class="section-body">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Phần mềm có làm chậm máy không?</span>
+            <span class="arrow">›</span>
+          </div>
+          <div class="faq-a">Phần mềm được thiết kế để chạy nền. Trong điều kiện bình thường, máy vẫn hoạt động ổn định.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Tôi có phải mở phần mềm mỗi ngày không?</span>
+            <span class="arrow">›</span>
+          </div>
+          <div class="faq-a">Không. Cha mẹ chỉ cần cài một lần. Phần mềm sẽ tự hoạt động sau khi máy khởi động.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Nếu tôi đổi cài đặt mà chưa thấy tác dụng thì sao?</span>
+            <span class="arrow">›</span>
+          </div>
+          <div class="faq-a">Sau khi bấm Lưu, cha mẹ cần <strong>khởi động lại máy</strong> để thay đổi có hiệu lực.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Nếu nhà có nhiều con dùng chung một máy thì sao?</span>
+            <span class="arrow">›</span>
+          </div>
+          <div class="faq-a">Cha mẹ có thể chọn đúng tài khoản của từng con khi cài để áp dụng cách quản lý phù hợp cho từng bé.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Nếu tôi quên mật khẩu thì làm sao?</span>
+            <span class="arrow">›</span>
+          </div>
+          <div class="faq-a">Cha mẹ hãy kiểm tra lại cuốn sổ đã ghi khi cài đặt. Nếu vẫn không được, hãy liên hệ hỗ trợ theo thông tin ở phần bên dưới.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="section-card" id="sec9">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>Hỗ Trợ Và Góp Ý</h2>
+    </div>
+    <div class="section-body">
+      <p style="margin-bottom:20px;">Nếu quên mật khẩu, không mở được phần mềm, không tìm thấy file cài đặt hoặc cần góp ý sản phẩm, cha mẹ có thể liên hệ với chúng tôi:</p>
+      <div class="support-cards">
+        <div class="support-card">
+          <div class="s-icon">📧</div>
+          <div class="s-label">Email hỗ trợ</div>
+          <div class="s-val"><a href="mailto:antoanchotrevn@gmail.com">antoanchotrevn@gmail.com</a></div>
+        </div>
+        <div class="support-card">
+          <div class="s-icon">💬</div>
+          <div class="s-label">Zalo hỗ trợ</div>
+          <div class="s-val"><a href="tel:0985941354">0985 941 354</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<footer>
+  <p>🛡️ <strong>An Toàn Cho Trẻ</strong> – Lá chắn bảo vệ con trên không gian mạng</p>
+  <p style="margin-top:8px; opacity:0.7;">Chúc quý phụ huynh cài đặt thành công và tạo được một không gian mạng an toàn hơn cho con.</p>
+</footer>
+
+<script>
+  function showCase(id) {
+    document.querySelectorAll('.case-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.case-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('case-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
