@@ -554,6 +554,34 @@ const UI = {
                 </div>
             </div>
         </section>
+        <section id="download" class="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>                    
+                    <h3 class="text-lg font-bold text-white mb-2">Sau khi tải phần mềm, hãy thực hiện theo một trong hai hướng dẫn sau.</h3>
+                                        
+                    <div class="space-y-6">
+                        <div class="flex space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-xs font-bold text-white">1</div>
+                            <div>
+                                <h4 data-i18n="ai_step_1_t" class="text-sm font-bold text-white">Tài liệu hướng dẫn cài đặt và sử dụng chi tiết</h4>
+                                <p class="text-xs text-slate-400 mt-1">
+                                <a href="guideline.html" target="_blank"  class="hover:text-slate-300 transition-colors">👉Bấm vào đây, đọc và làm theo tài liệu</a></p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-xs font-bold text-white">2</div>
+                            <div>
+                                <h4  class="text-sm font-bold text-white"> Video hướng dẫn cài đặt và sử dụng chi tiết</h4>
+                                <p  class="text-xs text-slate-400 mt-1">
+                                <a href="https://www.youtube.com/watch?v=JhguLUFVBbY&list=PLJAmOL0Ow42KualkqQloggfTfZOnShUxz" target="_blank"  class="hover:text-slate-300 transition-colors">
+                            👉Bấm vào đây, xem 📽️Video và làm theo từng bước
+                        </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
     `,
 
     FAQ: () => `
